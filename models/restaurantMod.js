@@ -48,7 +48,11 @@ exports.fetchRestaurantsByLocation = async (location, preferences) => {
     queryObject)
     .then(
     (restaurantList) => {
-      return restaurantList;
+      if (restaurantList.length === 0) {
+        return Promise.reject({ status: 404, msg: "No restaurants in your location" })
+      } else {
+        return restaurantList;
+      }
     }
   );
 };
