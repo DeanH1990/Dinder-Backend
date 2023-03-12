@@ -8,6 +8,4 @@ connectDB().then(() => {
       console.log("listening for requests");
   })
 })
-// app.listen(PORT, () => {
-//   console.log(`Listening on ${PORT}...`);
-// });
+
